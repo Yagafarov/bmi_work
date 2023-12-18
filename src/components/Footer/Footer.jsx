@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import Logo from '../../assets/images/navbar/Logo.svg'
+import Logo from '../../assets/images/navbar/LogoLight.svg'
 
 const Footer = () => {
     return (
@@ -17,12 +17,19 @@ const Footer = () => {
                     </div>
                     <div className="footer__links">
                         <h3 className="footer_title">Havolalar</h3>
+                        <ul>
+                            <li><a href="#">Bosh sahifa</a></li>
+                            <li><a href="#">Kurslar</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Sahifalar</a></li>
+                        </ul>
                     </div>
                     <div className="footer__support">
                         <h3 className="footer_title">Biz bilan bog'lanish</h3>
-                    </div>
-                    <div className="footer__location">
-                        Lorem, ipsum dolor.
+                        <ul>
+                            <li><a href="#">+998 (94) 022-73-77</a></li>
+                            <li><a href="#">dinmuhammadyagafarov@gmail.com</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div className="footer__bottom">

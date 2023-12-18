@@ -4,6 +4,20 @@
     padding: 2rem 0;
 }
 .footer__wrapper{
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-    gap: 3rem;
+    grid-template-columns: 5fr 2fr 5fr;
+    gap: 10rem;
+    margin: 3rem 0;
+}
+.footer_title{
+    color: var(--white);
+}
+.footer__wrapper li{
+    margin-bottom:1rem;
+}
+.footer__wrapper li a{
+    color: var(--white);
+}
+.footer__wrapper ul{
+    margin-top: 2.5rem;
+    color: white;
 }

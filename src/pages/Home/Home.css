@@ -1,0 +1,19 @@
+#home{
+    background: var(--blue);
+    color: var(--white);
+}
+.home .grid{
+    grid-template-columns: 6fr 6fr;
+}
+.home__context{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.home__context h1{
+    font-size: var(--h1-font-size);
+    color: var(--white);
+}
+.c-default{
+    color: var(--green);
+}
