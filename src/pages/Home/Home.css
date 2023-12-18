@@ -11,9 +11,17 @@
     flex-wrap: wrap;
 }
 .home__context h1{
-    font-size: var(--h1-font-size);
+    padding: 2rem 0;
+    font-size: 3rem;
     color: var(--white);
 }
 .c-default{
     color: var(--green);
+}
+.home__img img{
+    height: 115%;
+    object-fit: cover;
+}
+.home__btns Button:nth-child(2){
+    color: var(--white);
 }

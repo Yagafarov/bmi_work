@@ -1,4 +1,7 @@
 .navbar{
+    position: fixed;
+    z-index: 1;
+    background: var(--white);
     width: 100%;
     display: block;
     padding: 1rem 0;

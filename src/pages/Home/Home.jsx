@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-
+import Button from '../../components/Button/Button'
 import MainImg from '../../assets/images/main.png'
 
 const Home = () => {
@@ -12,6 +12,10 @@ const Home = () => {
             <div>
               <span>Muvaffaqiyatli murabbiylar ko'rish qobiliyatiga ega</span>
               <h1>Yaxshi <span className='c-default'>murabbiy</span> bu yaxshi o‘qishdir .</h1>
+              <div className='home__btns'>
+                <Button content ="Kurslarni ko’rish" variant="outline" />
+                <Button content ="Bepul konsultatsiya oling" variant="link"/>
+              </div>
             </div>
           </div>
           <div className="home__img">
