@@ -1,0 +1,41 @@
+.btn {
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+
+.btn-default {
+    border: 2px solid var(--linear-bg);
+    background: var(--linear-bg);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    background: transparent;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-link{
+    background: transparent;
+    text-decoration: underline;
+    font-weight: var(--font-bold);
+}
+.btn-link:hover{
+    color: var(--green);
+}
+
+@keyframes button-push {
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-default:hover,.btn-outline:hover {
+    animation: button-push 0.3s linear 1;
+}

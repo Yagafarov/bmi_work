@@ -1,0 +1,24 @@
+.navbar{
+    width: 100%;
+    display: block;
+    padding: 1rem 0;
+}
+.navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbar__menu{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__menu .navbar__link{
+    color: var(--dark);
+    font-weight: var(--font-medium);
+    font-size: var(--center-font-size);
+}
+.navbar__menu .navbar__link:hover{
+    color: var(--green);
+}

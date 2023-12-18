@@ -1,0 +1,9 @@
+.footer{
+    background: var(--linear-bg);
+    color: var(--white);
+    padding: 2rem 0;
+}
+.footer__wrapper{
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    gap: 3rem;
+}
