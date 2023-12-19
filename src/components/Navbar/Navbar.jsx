@@ -2,7 +2,8 @@ import React from 'react'
 import './Navbar.css'
 import Logo from '../../assets/images/navbar/Logo.svg'
 import { Link } from 'react-router-dom'
-import Button from '../Button/Button'
+import { Button } from 'antd'
+// import Button from '../Button/Button'
 
 
 const Navbar = () => {
@@ -33,8 +34,10 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className="navbar__btns">
-                    <Button content="Kirish" variant="link"/>
-                    <Button content="Ro'yxatdan o'tish" variant="default"/>
+                    {/* <Button content="Kirish" variant="link"/>
+                    <Button content="Ro'yxatdan o'tish" variant="default"/> */}
+                    <Button type='link' size='large' >Kirish</Button>
+                    <Button type='primary' >Ro'yxatdan o'tish</Button>
                 </div>
             </div>
         </navbar>
