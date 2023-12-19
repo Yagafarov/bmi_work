@@ -3,15 +3,16 @@ import './Navbar.css'
 import Logo from '../../assets/images/navbar/Logo.svg'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
-// import Button from '../Button/Button'
 
 
 const Navbar = () => {
+    
     return (
         <navbar className="navbar">
             <div className="container">
                 <div className="navbar__logo">
                     <img src={Logo} alt="" className="navbar__logo-img" />
+                    <div className="demo-logo" />
                 </div>
                 <ul className="navbar__menu">
                     <li className="navbar__menu-item">
@@ -34,10 +35,8 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className="navbar__btns">
-                    {/* <Button content="Kirish" variant="link"/>
-                    <Button content="Ro'yxatdan o'tish" variant="default"/> */}
                     <Button type='link' size='large' >Kirish</Button>
-                    <Button type='primary' >Ro'yxatdan o'tish</Button>
+                    <Button type='primary' size='large' >Ro'yxatdan o'tish</Button>
                 </div>
             </div>
         </navbar>
