@@ -20,8 +20,28 @@
 .navbar__menu .navbar__link{
     color: var(--dark);
     font-weight: var(--font-medium);
-    font-size: var(--center-font-size);
+    font-size: var(--normal-font-size);
 }
 .navbar__menu .navbar__link:hover{
     color: var(--green);
+}
+
+/* ant design edit */
+.ant-btn.ant-btn-primary{
+    background:var(--linear-bg);
+    font-family: var(--font);
+}
+.ant-btn.ant-btn-primary:hover,.ant-btn.ant-btn-primary:active,.ant-btn.ant-btn-primary:focus{
+    background:var(--linear-bg);
+}
+:where(.css-dev-only-do-not-override-p7e5j5).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+    color: #fff;
+    background:var(--linear-bg);
+    
+}
+:where(.css-dev-only-do-not-override-p7e5j5).ant-btn-link {
+    color:var(--dark);
+}
+.navbar__link:focus{
+    color:var(--green);
 }

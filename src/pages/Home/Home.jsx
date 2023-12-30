@@ -6,7 +6,7 @@ import MainImg from '../../assets/images/main.png'
 const Home = () => {
   return (
     <section id='home'>
-      <div className="home container">
+      {/* <div className="home container">
         <div className="grid">
           <div className="home__context">
             <div>
@@ -22,7 +22,8 @@ const Home = () => {
             <img src={MainImg} alt="" />
           </div>
         </div>
-      </div>
+      </div> */}
+      home
     </section>
   )
 }

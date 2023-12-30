@@ -9,7 +9,7 @@ import Course from './pages/Course/Course'
 import Blog from './pages/Blog/Blog'
 import Book from './pages/Book/Book'
 import Home from './pages/Home/Home'
-import Footer from './components/Footer/Footer'
+import AppFooter from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
         <Route path='/book' element={<Book/>}/>
         <Route path='/' element={<Home/>}/>
       </Routes>
-      <Footer/>
+      <AppFooter/>
     </div>
   )
 }

@@ -25,3 +25,6 @@
 .home__btns Button:nth-child(2){
     color: var(--white);
 }
+section{
+    padding: 10rem 0;
+}
