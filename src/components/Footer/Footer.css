@@ -2,6 +2,7 @@
     background: var(--linear-bg);
     color: var(--white);
     padding: 2rem 0;
+    font-size: var(--h1-font-size);
 }
 .footer__wrapper{
     grid-template-columns: 5fr 2fr 5fr;

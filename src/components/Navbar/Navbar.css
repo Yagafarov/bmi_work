@@ -42,3 +42,6 @@
 :where(.css-dev-only-do-not-override-p7e5j5).ant-btn-link {
     color:var(--dark);
 }
+.navbar__link:focus{
+    color:var(--green);
+}
