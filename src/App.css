@@ -1,0 +1,88 @@
+/* style variables */
+:root {
+
+    /* color */
+    --green: #2aaa94;
+    --white: #ffffff;
+    --dark: #4e596b;
+    --blue: #04016C;
+    --linear-bg: linear-gradient(102deg, #083F9B 0%, #7F56D9 93.39%);
+
+    /* typography */
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --center-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .876rem;
+    --smaller-font-size: .813rem;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --shadow: 0px 5px 20px 0px rgb(69 67 96 /10%);
+    --border-radius: 20px;
+    --font: 'Product Sans', sans-serif;
+
+}
+
+/* default styles */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Product Sans', sans-serif;
+}
+
+*:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+.heme__wrapper {
+    position: relative;
+}
+
+.home__img {
+    position: relative;
+    z-index: 1;
+}
+
+.home__img-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 740px;
+    height: 692px;
+    flex-shrink: 0;
+    border-radius: 740px;
+    background: #005FFF;
+    filter: blur(150px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* color of the scrollbar thumb */
+    border-radius: 6px;
+    /* roundness of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* color of the scrollbar track */
+}
