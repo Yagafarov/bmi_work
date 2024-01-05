@@ -5,6 +5,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 import MainImg from '../assets/images/main1.png'
 import TitleContent from '../components/TitleContent/TitleContent'
+import TabFilter from '../components/TabFilter/TabFilter'
 
 
 const Home = () => {
@@ -12,13 +13,13 @@ const Home = () => {
     return (
         <>
             <Box style={{ background: '#04016C', color: 'white', minHeight: '90vh' }} overflow="hidden"  >
-                <Container maxWidth="lg">
+                <Container maxWidth="xl">
                     {/* for start home */}
                     <Grid container spacing={2} mt={{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6 }} >
                         <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }} display="flex" flexWrap={'wrap'} alignItems="center" mb={{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6 }}>
                             <div>
 
-                                <Typography variant="overline" display="block" textAlign={{ xs: 'center', sm: 'left' }}>
+                                <Typography variant={{ xs: 'caption', sm: 'overline' }} display="block" textAlign={{ xs: 'center', sm: 'left' }}>
                                     Muvaffaqiyatli murabbiylar ko'rish qobiliyatiga ega
                                 </Typography>
                                 <Typography variant="h2" gutterBottom fontSize={{ xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem', xl: '4rem' }} fontWeight="bold" textAlign={{ xs: 'center', sm: 'left' }}>
@@ -88,11 +89,16 @@ const Home = () => {
                         </Grid>
                     </Grid>
                     {/* for course */}
-                    <TitleContent title="Tanlangan Kurslar" content="O’quv tizimidagi eng mashxur va sungi kurslar to’plamini aynan shu yerda ko’rishingiz mumkin." />
                 </Container>
 
             </Box>
-            
+            <Box>
+                <Container maxWidth="xl">
+                    <TitleContent title="Tanlangan Kurslar" content="O’quv tizimidagi eng mashxur va sungi kurslar to’plamini aynan shu yerda ko’rishingiz mumkin." />
+                    <TabFilter />
+                </Container>
+            </Box>
+
         </>
 
     )
