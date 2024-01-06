@@ -1,4 +1,36 @@
-.item{
-    background-color: red;
+.home__card{
+    width:300px;
+    padding:20px;
+    top:0;
+    z-index: 10;
+    text-align: left;
     display: flex;
+    align-items: center;
+}
+.home__card .icon__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    padding: 5px;
+    margin: 5px 10px;
+    border-radius: 50%;
+    position: relative;
+}
+.home__card-content .line{
+    position: absolute;
+    width: 0.1px;
+    height: 90%;
+    background-color: var(--green);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 45px;
+    z-index: -1;
+}
+.icon__wrapper-icon{
+    width: 100px;
+}
+.home__card-content .MuiRating-icon{
+    color: var(--green);
 }
