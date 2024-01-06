@@ -47,20 +47,15 @@ body {
     font-family: var(--body-font);
 }
 
-.heme__wrapper {
-    position: relative;
-}
-
 .home__img {
     position: relative;
     z-index: 1;
 }
-
+/* <span className="home__img-bg"></span> */
 .home__img-bg {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     margin: auto;
     width: 740px;
     height: 692px;

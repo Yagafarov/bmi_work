@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/navbar/Logo.svg'
 
 const pages = [
-    { title: 'Bosh sahifa', link: '/' },
     { title: 'Kurslar', link: '/course' },
     { title: 'Blog', link: '/blog' },
     { title: 'Kitoblar', link: '/book' },
@@ -36,8 +35,9 @@ function Header() {
 
     return (
         <AppBar position="fixed" sx={{ backgroundColor: '#fff', color: '#000', top: '0', left: '0' }} component="nav" >
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
+            <Container maxWidth="xl" >
+                <Toolbar disableGutters >
+
                     <Typography
                         variant="h6"
                         noWrap
@@ -81,7 +81,7 @@ function Header() {
                             }}
                         >
                             {pages.map((page) => (
-                                <Link to={page.link} key={page.link} style={{ textDecoration: 'none', color: 'inherit' }} >
+                                <Link to={page.link} key={page.link} style={{ textDecoration: 'none', color: 'inherit'}} >
                                     <MenuItem key={page.link} onClick={handleCloseNavMenu}>
                                         <Typography textAlign="center">
                                             {page.title}
@@ -96,7 +96,7 @@ function Header() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -110,13 +110,13 @@ function Header() {
                     >
                         <img src={Logo} alt="Eduadd" style={{ width: '130px' }} />
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ justifyContent: 'flex-end', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Link to={page.link} style={{ textDecoration: 'none', color: 'inherit' }} >
                                 <Button
                                     key={page.link}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'inherit', display: 'block' }}
+                                    sx={{ my: 2, color: 'inherit', display: 'block',marginRight:'20px' }}
                                 >
                                     {page.title}
                                 </Button>
