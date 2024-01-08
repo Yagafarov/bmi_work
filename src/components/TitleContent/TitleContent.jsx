@@ -11,8 +11,8 @@ const TitleContent = ({title,content}) => {
     </>
   );
   return (
-    <Box textAlign={'center'}>
-      <Typography variant='h5'my={2}  fontWeight={'bold'} >{titleWithColorChange}</Typography>
+    <Box textAlign={'center'} py={3}>
+      <Typography variant='h4'mb={2}  fontWeight={'bold'} >{titleWithColorChange}</Typography>
       <Typography maxWidth={'sm'} style={{margin:'0 auto'}} >{content}</Typography>
     </Box>
     
