@@ -1,9 +1,10 @@
 import { Box, Button, Container, Divider, Grid, IconButton, InputBase, Paper, Rating, Stack, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 import './pagesStyle.css'
+import Course from './Course'
 
 import MainImg from '../assets/images/main1.png'
-import { BoltRounded, Mouse, Search } from '@mui/icons-material'
+import { BoltRounded, Search } from '@mui/icons-material'
 
 const Home = () => {
     let theme = createTheme();
@@ -20,7 +21,7 @@ const Home = () => {
                                     <Typography variant='overline'>
                                         Muvaffaqiyatli murabbiylar ko'rish qobiliyatiga ega
                                     </Typography>
-                                    <Typography variant='h3' fontWeight={'bold'} my={{ xs: 0, md: 3 }} mb={{ xs: 3, md: 5 }} >
+                                    <Typography variant='h3' fontWeight={'bold'} my={{ xs: 0, md: 7 }} mb={{ xs: 3, md: 5 }} >
                                         Yaxshi murabbiy bu yaxshi o‘qishdir .
                                     </Typography>
                                 </ThemeProvider>
@@ -76,9 +77,6 @@ const Home = () => {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Box className="scroll__btn" position={'absolute'}  bottom={{xs:'1rem',md:'10rem'}} >
-                            <Mouse style={{color:'white'}} className='scroll__btn-icon'/>
-                        </Box>
                     </Grid>
                 </Container>
 
@@ -86,27 +84,34 @@ const Home = () => {
             <Box>
                 <Container maxWidth="xl">
                     <Grid container textAlign={'center'} py={1}>
-                        <Grid xs={12} md={4} item>
+                        <Grid xs={12} md={3} item>
                             <Box p={3} >
                                 <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >50+</Typography>
                                 <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
                             </Box>
                         </Grid>
-                        <Grid xs={12} md={4} item>
+                        <Grid xs={12} md={3} item>
                             <Box p={3} >
                                 <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >10+</Typography>
                                 <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
                             </Box>
                         </Grid>
-                        <Grid xs={12} md={4} item>
+                        <Grid xs={12} md={3} item>
                             <Box p={3} >
                                 <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >120+</Typography>
                                 <Typography variant='overline'>Platformamizda mavjud kitoblar soni</Typography>
                             </Box>
                         </Grid>
+                        <Grid xs={12} md={3} item>
+                            <Box p={3} >
+                                <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >500+</Typography>
+                                <Typography variant='overline'>Jami tahsil olayotgan o’quvchilarimiz</Typography>
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Container>
             </Box>
+            <Course />
 
         </>
 

@@ -1,7 +1,7 @@
-import { Box, Typography } from '@mui/material'
+import { Box, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 
-const TitleContent = ({title,content}) => {
+const TitleContent = ({ title, content }) => {
   const titleWords = title.split(' ');
   const titleWithColorChange = (
     <>
@@ -10,12 +10,18 @@ const TitleContent = ({title,content}) => {
       {titleWords.slice(2).join(' ')}
     </>
   );
+  let theme = createTheme();
+  theme = responsiveFontSizes(theme);
   return (
+  
     <Box textAlign={'center'} py={3}>
-      <Typography variant='h4'mb={2}  fontWeight={'bold'} >{titleWithColorChange}</Typography>
-      <Typography maxWidth={'sm'} style={{margin:'0 auto'}} >{content}</Typography>
-    </Box>
-    
+        <ThemeProvider theme={theme}>
+        <Typography variant='h4' mb={2} fontWeight={'bold'} >{titleWithColorChange}</Typography>
+        <Typography maxWidth={'sm'} style={{ margin: '0 auto' }} >{content}</Typography>
+    </ThemeProvider>
+      </Box>
+
+
   )
 }
 
