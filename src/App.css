@@ -3,8 +3,10 @@
 
     /* color */
     --green: #2aaa94;
+    --green-light: #2aaa9586;
     --white: #ffffff;
     --dark: #4e596b;
+    --dark-light: #4e596b65;
     --blue: #04016C;
     --linear-bg: linear-gradient(102deg, #083F9B 0%, #7F56D9 93.39%);
 
@@ -57,13 +59,16 @@ body {
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 740px;
+    width: 100%;
     height: 692px;
     flex-shrink: 0;
     border-radius: 740px;
     background: #005FFF;
     filter: blur(150px);
+    overflow: hidden;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 10px;

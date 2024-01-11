@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
         <>
-            <Box style={{ background: '#04016C', color: 'white' }} minHeight={{ xs: '100vh', md: '84vh' }}  pt={{ xs: 7, sm: 8, md: 9, lg: 9, xl: 9 }} mt={1} alignItems={'center'} display={'flex'}>
+            <Box style={{ background: '#04016C', color: 'white' }} minHeight={{ xs: '100vh', md: '84vh' }} pt={{ xs: 7, sm: 8, md: 9, lg: 9, xl: 9 }} mt={1} alignItems={'center'} display={'flex'}>
                 <Container maxWidth="xl">
                     <Grid container sx={{ flexGrow: 1 }}>
                         <Grid item xs={12} md={6} order={{ xs: 1, md: 0 }} display={'flex'} alignItems={'center'}>
@@ -86,32 +86,40 @@ const Home = () => {
                     <Grid container textAlign={'center'} py={1}>
                         <Grid xs={12} md={3} item>
                             <Box p={3} >
-                                <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >50+</Typography>
-                                <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >50+</Typography>
+                                    <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
+                                </ThemeProvider>
                             </Box>
                         </Grid>
                         <Grid xs={12} md={3} item>
                             <Box p={3} >
-                                <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >10+</Typography>
-                                <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >10+</Typography>
+                                    <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
+                                </ThemeProvider>
                             </Box>
                         </Grid>
                         <Grid xs={12} md={3} item>
                             <Box p={3} >
-                                <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >120+</Typography>
-                                <Typography variant='overline'>Platformamizda mavjud kitoblar soni</Typography>
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >120+</Typography>
+                                    <Typography variant='overline'>Platformamizda mavjud kitoblar soni</Typography>
+                                </ThemeProvider>
                             </Box>
                         </Grid>
                         <Grid xs={12} md={3} item>
                             <Box p={3} >
-                                <Typography variant='h4' style={{color:'var(--green)'}} fontWeight={'bold'} >500+</Typography>
-                                <Typography variant='overline'>Jami tahsil olayotgan o’quvchilarimiz</Typography>
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >500+</Typography>
+                                    <Typography variant='overline'>Jami tahsil olayotgan o’quvchilarimiz</Typography>
+                                </ThemeProvider>
                             </Box>
                         </Grid>
                     </Grid>
                 </Container>
             </Box>
-            <Course />
+            <Course list={8}/>
 
         </>
 

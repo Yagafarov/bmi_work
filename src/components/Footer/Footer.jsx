@@ -42,20 +42,20 @@ const Footer = () => {
                     <Grid item xs={12} sm={4} >
                         <Typography variant="h6" color="text.primary" gutterBottom>Ijtimoiy tarmoqlar
                         </Typography>
-                        <Link href="https://www.facebook.com/" color="inherit">
+                        <Link href="https://www.facebook.com/" color="inherit" target="__blank">
                             <Facebook />
                         </Link>
                         <Link
                             href="https://www.instagram.com/"
                             color="inherit"
-                            sx={{ pl: 1, pr: 1 }}
+                            sx={{ pl: 1, pr: 1 }}  target="__blank"
                         >
                             <Instagram />
                         </Link>
-                        <Link href="https://www.twitter.com/" color="inherit">
+                        <Link href="https://www.twitter.com/" color="inherit"  target="__blank">
                             <Twitter />
                         </Link>
-                        <Link href="https://www.telegram.org/" color="inherit">
+                        <Link href="https://www.telegram.org/" color="inherit"  target="__blank">
                             <Telegram />
                         </Link>
                     </Grid>
