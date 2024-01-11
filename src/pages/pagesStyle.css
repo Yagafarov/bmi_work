@@ -50,3 +50,28 @@
       color: var(--green);
     }
   }
+
+
+  #ads{
+    background: var(--linear-bg);
+    color:white;
+    text-align: center;
+  }
+  #category{
+    background: linear-gradient(180deg, #D9ECFF 0%, rgba(217, 236, 255, 0.00) 100%);
+    text-align: center;
+  }
+  #category .image{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  #category .image_wr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
