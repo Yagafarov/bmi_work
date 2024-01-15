@@ -11,12 +11,7 @@ import ads1 from '../assets/images/why/icon1.svg'
 import ads2 from '../assets/images/why/icon2.svg'
 import ads3 from '../assets/images/why/icon3.svg'
 
-import cat0 from '../assets/images/category/Icon-0.png'
-import cat1 from '../assets/images/category/Icon-1.png'
-import cat2 from '../assets/images/category/Icon-2.png'
-import cat3 from '../assets/images/category/Icon-3.png'
-import cat4 from '../assets/images/category/Icon-4.png'
-import cat5 from '../assets/images/category/Icon-5.png'
+import main2img from '../assets/images/home_support.png'
 
 const Home = () => {
     let theme = createTheme();
@@ -179,165 +174,23 @@ const Home = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Box id="category" py={7}>
+            <Box py={7}>
                 <Container maxWidth="xl">
-                    <TitleContent title="Top Kategoriyalar" content="12 000+ noyob onlayn kurslar ro'yxati dizaynlari" />
                     <Grid container spacing={2} my={3}>
-                        <Grid item xs={12} md={2}  className='image_wr'>
-                            <Card sx={{ maxWidth: 330 }}>
-                                <CardActionArea>
-                                    <Box height={200} borderRadius={2} className="image_wr">
-                                        <CardMedia
-                                            component="img"
-                                            image={cat0}
-                                            alt="green iguana"
-                                            style={{ background: '#DF385B' }}
-                                            className='image'
-                                        />
-                                    </Box>
-                                    <CardContent>
-                                        <ThemeProvider theme={theme}>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Raqamli marketing
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                25 Kurslar
-                                            </Typography>
-                                        </ThemeProvider>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-                        
-                        <Grid item xs={12} md={2}  className='image_wr'>
-                            <Card sx={{ maxWidth: 300 }}>
-                                <CardActionArea>
-                                    <Box height={200} borderRadius={2} className="image_wr">
-                                        <CardMedia
-                                            component="img"
-                                            image={cat1}
-                                            alt="green iguana"
-                                            style={{ background: '#5AB48E' }}
-                                            className='image'
-                                        />
-                                    </Box>
-                                    <CardContent>
-                                        <ThemeProvider theme={theme}>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                            Web Development
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                16 Kurslar
-                                            </Typography>
-                                        </ThemeProvider>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
+                        <Grid item xs={12} md={6} >
+                            <img src={main2img} alt="" style={{width:'100%'}} />
                         </Grid>
 
-                        <Grid item xs={12} md={2}  className='image_wr'>
-                            <Card sx={{ maxWidth: 300 }}>
-                                <CardActionArea>
-                                    <Box height={200} borderRadius={2} className="image_wr">
-                                        <CardMedia
-                                            component="img"
-                                            image={cat2}
-                                            alt="green iguana"
-                                            style={{ background: '#7F56D9' }}
-                                            className='image'
-                                        />
-                                    </Box>
-                                    <CardContent>
-                                        <ThemeProvider theme={theme}>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                            San'at va Gumanitar fanlar
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                76 Kurslar
-                                            </Typography>
-                                        </ThemeProvider>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
+                        <Grid item xs={12} md={6} display={'flex'} alignItems={'center'}>
+                            <Box>
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h3' >Muvaffaqiyatning birinchi omili <span> qarshilikni yo‘q qiladi.</span></Typography>
+                                    <Typography my={3} >Agar siz nimadan boshlash kerak ekanligini bilmasangiz, unda biz sizga ko’maklashamiz. Bizning loyihada turli xildagi zamonaviy kasblar mavjud bo’lib, bu kurslar malakali o’qituvchilar tomonidan tayyorlangan.</Typography>
+                                    <Button variant='contained' >Batafsil</Button>
+                                </ThemeProvider>
+                            </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={2}  className='image_wr'>
-                            <Card sx={{ maxWidth: 300 }}>
-                                <CardActionArea>
-                                    <Box height={200} borderRadius={2} className="image_wr">
-                                        <CardMedia
-                                            component="img"
-                                            image={cat3}
-                                            alt="green iguana"
-                                            style={{ background: '#FAB437' }}
-                                            className='image'
-                                        />
-                                    </Box>
-                                    <CardContent>
-                                        <ThemeProvider theme={theme}>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                            Personal Development
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                22 Kurslar
-                                            </Typography>
-                                        </ThemeProvider>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-
-                        <Grid item xs={12} md={2}  className='image_wr'>
-                            <Card sx={{ maxWidth: 300 }}>
-                                <CardActionArea>
-                                    <Box height={200} borderRadius={2} className="image_wr">
-                                        <CardMedia
-                                            component="img"
-                                            image={cat4}
-                                            alt="green iguana"
-                                            style={{ background: '#2AAA94' }}
-                                            className='image'
-                                        />
-                                    </Box>
-                                    <CardContent>
-                                        <ThemeProvider theme={theme}>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                            IT and Software
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                110 Kurslar
-                                            </Typography>
-                                        </ThemeProvider>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-
-                        <Grid item xs={12} md={2}  className='image_wr'>
-                            <Card sx={{ maxWidth: 300 }}>
-                                <CardActionArea>
-                                    <Box height={200} borderRadius={2} className="image_wr">
-                                        <CardMedia
-                                            component="img"
-                                            image={cat5}
-                                            alt="green iguana"
-                                            style={{ background: '#2CD182' }}
-                                            className='image'
-                                        />
-                                    </Box>
-                                    <CardContent>
-                                        <ThemeProvider theme={theme}>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                            Grafik Dizayn
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                85 Kurslar
-                                            </Typography>
-                                        </ThemeProvider>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
 
                     </Grid>
                 </Container>
