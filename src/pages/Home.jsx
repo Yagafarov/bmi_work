@@ -1,17 +1,15 @@
-import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Divider, Grid, IconButton, InputBase, Paper, Rating, Stack, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
+import { Box, Button, Container, Divider, Grid, IconButton, InputBase, Paper, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 import './pagesStyle.css'
-import Course from './Course'
 
-import MainImg from '../assets/images/main1.png'
+
+
 import { BoltRounded, Search } from '@mui/icons-material'
-import TitleContent from '../components/TitleContent/TitleContent'
 
-import ads1 from '../assets/images/why/icon1.svg'
-import ads2 from '../assets/images/why/icon2.svg'
-import ads3 from '../assets/images/why/icon3.svg'
 
-import main2img from '../assets/images/home_support.png'
+import Lottie from 'lottie-react'
+import animat from '../assets/Animation - 1705563305039.json'
+
 
 const Home = () => {
     let theme = createTheme();
@@ -19,19 +17,19 @@ const Home = () => {
 
     return (
         <>
-            <Box style={{ background: '#04016C', color: 'white' }} minHeight={{ xs: '100vh', md: '84vh' }} pt={{ xs: 7, sm: 8, md: 9, lg: 9, xl: 9 }} mt={1} alignItems={'center'} display={'flex'}>
+            <Box minHeight={{ xs: '100%', md: '100vh' }} pt={{ xs: 2, sm: 2, md: 2, lg: 2, xl: 2 }} mt={1} alignItems={'center'} display={'flex'}>
                 <Container maxWidth="xl">
                     <Grid container sx={{ flexGrow: 1 }}>
-                        <Grid item xs={12} md={6} order={{ xs: 1, md: 0 }} display={'flex'} alignItems={'center'}>
+                        <Grid item xs={12} md={6} order={{ xs: 1, md: 0 }} display={'flex'} alignItems={'center'}  >
                             <Box textAlign={{ xs: 'center', md: 'left' }}>
                                 <ThemeProvider theme={theme}>
-                                    <Typography variant='overline'>
-                                        Muvaffaqiyatli murabbiylar ko'rish qobiliyatiga ega
+                                    <Typography variant='h3' fontWeight={'bold'} my={{ xs: 0, md: 7 }} mb={{ xs: 0, md: 5 }} >
+                                        <span style={{ color: 'var(--green)' }}>Dasturlash</span>ga oid kasblarni o’rganamiz.
                                     </Typography>
                                 </ThemeProvider>
                                 <ThemeProvider theme={theme}>
-                                    <Typography variant='h3' fontWeight={'bold'} my={{ xs: 0, md: 7 }} mb={{ xs: 3, md: 5 }} >
-                                        Yaxshi murabbiy bu yaxshi o‘qishdir .
+                                    <Typography variant='body1'>
+                                        Siz veb-saytlar yaratish, mobil ilovalar ishlab chiqarish yoki dasturlash sohasida yetarli bilim va ko'nikmalarga ega bo'lishni istaysizmi? Bizning kurslarimiz dasturlash sohasidagi kasblarni o'rganish uchun juda foydali bo'ladi.
                                     </Typography>
                                 </ThemeProvider>
                                 <Box mt={2}>
@@ -62,38 +60,15 @@ const Home = () => {
 
                         </Grid>
                         <Grid item xs={12} md={6} position={'relative'} textAlign={{ xs: 'center', md: 'right' }} alignItems={'end'} order={{ xs: 0, md: 1 }} >
-                            <img src={MainImg} alt="" className='home__img' width={'70%'} />
-                            <span className="home__img-bg"></span>
-                            <Box position={'absolute'} className="home__card" display={{ xs: 'none', md: 'flex' }}>
-                                <div className='icon__wrapper' >
-                                    <BoltRounded className='icon__wrapper-icon' />
-                                </div>
-                                <Box className='home__card-content'  >
-                                    <span className='line' ></span>
-                                    <Typography variant='subtitle2' style={{ color: 'var(--green)' }} fontWeight={'bold'}>
-                                        Ronald Richards
-                                    </Typography>
-                                    <Typography fontSize={'0.80rem'}>
-                                        Murabbiy rolida siz savollar berasiz va o'zingizga ko'proq ishonasiz ma'lumotlarni taqdim etish uchun mutaxassis bo'lgan xodimlar.
-                                    </Typography>
-                                    <Box sx={{
-                                        width: 200,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                    }} mt >
-                                        <Box sx={{ mr: 2 }}>4.9</Box>
-                                        <Stack spacing={1}>
-                                            <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly size="small" />
-                                        </Stack>
-                                    </Box>
-                                </Box>
-                            </Box>
+                            {/* <img src={MainImg} alt="" className='home__img' width={'70%'} /> */}
+                            <Lottie animationData={animat} className='home__img' width={'20%'} />
+                            {/* <span className="home__bg"></span> */}
                         </Grid>
                     </Grid>
                 </Container>
 
             </Box>
-            <Box>
+            {/* <Box>
                 <Container maxWidth="xl">
                     <Grid container textAlign={'center'} py={1}>
                         <Grid xs={12} md={3} item>
@@ -130,71 +105,11 @@ const Home = () => {
                         </Grid>
                     </Grid>
                 </Container>
-            </Box>
+            </Box> */}
 
-            <Course list={8} />
-
-            <Box id="ads" py={7}>
-                <Container maxWidth="xl">
-                    <TitleContent title="Nega bizning kurslarimiz bilan o’rganamiz?" content="O’quvchilarimiz orasida juda ko’p uchraydigan savol. Bunga bir necha sabablarni keltirishimiz mumkin." />
-                    <Grid container spacing={2} my={3}>
-                        <Grid item xs={12} md={4} >
-                            <ThemeProvider theme={theme}>
-                                <img src={ads1} alt="" />
-                                <Typography variant='h5' style={{ fontWeight: 'bold' }} my={3}>
-                                    01. O’rganish
-                                </Typography>
-                                <Typography variant='body1'>
-                                    Bizning platformada o’rganish eng zamovaviy uslubda amalga oshiriladi va eng malakali o’qituvchilar bilan
-                                </Typography>
-                            </ThemeProvider>
-                        </Grid>
-                        <Grid item xs={12} md={4} style={{ borderLeft: "1px dashed white", borderRight: "1px dashed white" }} >
-                            <ThemeProvider theme={theme}>
-                                <img src={ads2} alt="" />
-                                <Typography variant='h5' style={{ fontWeight: 'bold' }} my={3}>
-                                    02. Bitiruvchi
-                                </Typography>
-                                <Typography variant='body1'>
-                                    Kurslarni birituvchi o’z sohasidagi eng zamonaviy bilim va ko’nikmalarga ega bo’ladi.
-                                </Typography>
-                            </ThemeProvider>
-                        </Grid>
-                        <Grid item xs={12} md={4} >
-                            <ThemeProvider theme={theme}>
-                                <img src={ads3} alt="" />
-                                <Typography variant='h5' style={{ fontWeight: 'bold' }} my={3}>
-                                    03. Ish
-                                </Typography>
-                                <Typography variant='body1'>
-                                    Bizning kurslarni tamomlagan o’quvchilarimiz o’zi uchun eng loyiq joylarda ishlashadi.
-                                </Typography>
-                            </ThemeProvider>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </Box>
-            <Box py={7}>
-                <Container maxWidth="xl">
-                    <Grid container spacing={2} my={3}>
-                        <Grid item xs={12} md={6} >
-                            <img src={main2img} alt="" style={{width:'100%'}} />
-                        </Grid>
-
-                        <Grid item xs={12} md={6} display={'flex'} alignItems={'center'}>
-                            <Box>
-                                <ThemeProvider theme={theme}>
-                                    <Typography variant='h3' >Muvaffaqiyatning birinchi omili <span> qarshilikni yo‘q qiladi.</span></Typography>
-                                    <Typography my={3} >Agar siz nimadan boshlash kerak ekanligini bilmasangiz, unda biz sizga ko’maklashamiz. Bizning loyihada turli xildagi zamonaviy kasblar mavjud bo’lib, bu kurslar malakali o’qituvchilar tomonidan tayyorlangan.</Typography>
-                                    <Button variant='contained' >Batafsil</Button>
-                                </ThemeProvider>
-                            </Box>
-                        </Grid>
+            {/* <Course list={8} /> */}
 
 
-                    </Grid>
-                </Container>
-            </Box>
         </>
 
     )
