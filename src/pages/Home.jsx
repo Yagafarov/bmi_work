@@ -1,7 +1,7 @@
-import { Box, Button, Container, Divider, Grid, IconButton, InputBase, Paper, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
+import { Box, Container, Divider, Grid, IconButton, InputBase, Paper, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 import './pagesStyle.css'
-
+import Course from './Course'
 
 
 import { BoltRounded, Search } from '@mui/icons-material'
@@ -32,13 +32,7 @@ const Home = () => {
                                         Siz veb-saytlar yaratish, mobil ilovalar ishlab chiqarish yoki dasturlash sohasida yetarli bilim va ko'nikmalarga ega bo'lishni istaysizmi? Bizning kurslarimiz dasturlash sohasidagi kasblarni o'rganish uchun juda foydali bo'ladi.
                                     </Typography>
                                 </ThemeProvider>
-                                <Box mt={2}>
-                                    <ThemeProvider theme={theme}>
-                                        <Button variant='outlined' style={{ color: 'white', borderColor: 'white' }} >Boshlash</Button>
-                                        <Button variant='text' style={{ color: 'white', marginLeft: '20px' }}>Bepul konsultatsiya oling</Button>
-                                    </ThemeProvider>
-                                </Box>
-                                <Grid maxWidth={{ md: '400px' }}>
+                                <Grid maxWidth={{ md: '400px' }} mb={3}>
                                     <Paper
                                         component="form"
                                         sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', marginTop: '1rem' }}
@@ -57,18 +51,15 @@ const Home = () => {
                                     </Paper>
                                 </Grid>
                             </Box>
-
                         </Grid>
                         <Grid item xs={12} md={6} position={'relative'} textAlign={{ xs: 'center', md: 'right' }} alignItems={'end'} order={{ xs: 0, md: 1 }} >
-                            {/* <img src={MainImg} alt="" className='home__img' width={'70%'} /> */}
-                            <Lottie animationData={animat} className='home__img' width={'20%'} />
-                            {/* <span className="home__bg"></span> */}
+                            <Lottie animationData={animat} className='home__img' width={'10%'} />
                         </Grid>
                     </Grid>
                 </Container>
 
             </Box>
-            {/* <Box>
+            <Box>
                 <Container maxWidth="xl">
                     <Grid container textAlign={'center'} py={1}>
                         <Grid xs={12} md={3} item>
@@ -105,9 +96,29 @@ const Home = () => {
                         </Grid>
                     </Grid>
                 </Container>
-            </Box> */}
-
-            {/* <Course list={8} /> */}
+            </Box>
+            <Course list={8} />
+            <Box>
+                <Container maxWidth="xl">
+                    <Grid container textAlign={'center'} py={1} spacing={3}>
+                        <Grid xs={12} md={6} item>
+                            <Box p={3} className="wrap" >
+                                <ThemeProvider theme={theme}>
+                                    
+                                    <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
+                                </ThemeProvider>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} md={6} item>
+                            <Box p={3} className="wrap" >
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
+                                </ThemeProvider>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
 
 
         </>

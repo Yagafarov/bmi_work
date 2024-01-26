@@ -6,3 +6,9 @@
 .filter__buttons Button:focus{
     color:white;
 }
+.contained{
+    background-color: red;
+}
+.outlined{
+    background-color: blue;
+}

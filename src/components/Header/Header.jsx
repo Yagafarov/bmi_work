@@ -126,7 +126,7 @@ function Header() {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Link to={'/login'} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <Button variant='outlined' >
+                            <Button variant='outlined' style={{color:'var(--green)',borderColor:'var(--green)'}} >
                                 Kirish
                             </Button>
                         </Link>
