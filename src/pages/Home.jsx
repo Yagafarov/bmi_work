@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <>
-            <Box minHeight={{ xs: '100%', md: '100vh' }} pt={{ xs: 4, sm: 2, md: 2, lg: 2, xl: 2 }} mt={1} alignItems={'center'} display={'flex'}>
+            <Box minHeight={{ xs: '100%', md: '100vh' }} pt={{ xs: 8, sm: 2, md: 2, lg: 2, xl: 2 }} mt={1} alignItems={'center'} display={'flex'}>
                 <Container maxWidth="xl">
                     <Grid container sx={{ flexGrow: 1 }}>
                         <Grid item xs={12} md={6} order={{ xs: 1, md: 0 }} display={'flex'} alignItems={'center'}  >
