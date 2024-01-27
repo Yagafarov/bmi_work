@@ -69,6 +69,13 @@
   .home__img{
     width: 90%;
   }
-  .wrap{
-    background-color: red;
+  .wrap .wrap__card{
+    border: 1px solid var(--green-light);
+  }
+
+  .wrap .wrap__card.wrapm{
+    background-color: var(--green-light);
+  }
+  .learn__box{
+    border-radius: 0.2rem;
   }

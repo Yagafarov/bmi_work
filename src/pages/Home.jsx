@@ -1,9 +1,11 @@
-import { Box, Button, Container,Grid,ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, Container, Grid, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 import './pagesStyle.css'
 import Course from './Course'
 
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 
 
@@ -15,6 +17,11 @@ import TitleContent from '../components/TitleContent/TitleContent'
 const Home = () => {
     let theme = createTheme();
     theme = responsiveFontSizes(theme);
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
 
     return (
         <>
@@ -33,9 +40,9 @@ const Home = () => {
                                         Siz veb-saytlar yaratish, mobil ilovalar ishlab chiqarish yoki dasturlash sohasida yetarli bilim va ko'nikmalarga ega bo'lishni istaysizmi? Bizning kurslarimiz dasturlash sohasidagi kasblarni o'rganish uchun juda foydali bo'ladi.
                                     </Typography>
                                 </ThemeProvider>
-                                <Grid  my={3}>
-                                    <Button variant='contained' style={{backgroundColor:'var(--green)'}} >Boshlash</Button>
-                                    <Button style={{color:'var(--green)',marginLeft:'2rem'}} > <PlayCircleIcon/> biz haqimizda </Button>
+                                <Grid my={3}>
+                                    <Button variant='contained' style={{ backgroundColor: 'var(--green)' }} >Boshlash</Button>
+                                    <Button style={{ color: 'var(--green)', marginLeft: '2rem' }} > <PlayCircleIcon style={{ marginRight: '0.5rem' }} /> biz haqimizda </Button>
                                 </Grid>
                             </Box>
                         </Grid>
@@ -44,7 +51,6 @@ const Home = () => {
                         </Grid>
                     </Grid>
                 </Container>
-
             </Box>
             <Box>
                 <Container maxWidth="xl">
@@ -84,32 +90,103 @@ const Home = () => {
                     </Grid>
                 </Container>
             </Box>
-            {/* <Course list={8} /> */}
             <Box>
                 <Container maxWidth="xl">
-                <TitleContent  title="Biz bilan o'rganing" content="O’quv tizimidagi eng mashxur va sungi kurslar to’plamini aynan shu yerda ko’rishingiz mumkin." />
-                </Container>
-            </Box>
+                    <TitleContent title="Biz bilan o'rganing" content="Bizing o'quv platforma orqali quyidagilarga ega bo'lishingiz mumkin." />
 
-            <Box>
-                <Container maxWidth="xl">
-                    <Grid container textAlign={'center'} py={1} spacing={3}>
-                        <Grid xs={12} md={6} item>
+                    <Grid container spacing={3}>
+                        <Grid xs={12} md={4} item>
                             <Box p={3} className="wrap" >
-                                <ThemeProvider theme={theme}>
-                                    
-                                    <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
-                                </ThemeProvider>
+                                <Card className='wrap__card'>
+                                    <CardContent>
+                                        <ThemeProvider theme={theme}>
+                                            <Typography variant='h5' >
+                                                O'qituvchilar
+                                            </Typography>
+                                            <Typography variant='body2' my={3} >
+                                                Malakali o'qituvchilardan zamonaviy kasblarni o'rganish, o'z kasbining ustalaridan o'rganishingiz tarafdorimiz.
+                                            </Typography>
+                                            <Button variant='outlined' style={{ color: 'var(--green)', borderColor: 'var(--green)' }} >Batafsil</Button>
+                                        </ThemeProvider>
+                                    </CardContent>
+                                </Card>
                             </Box>
                         </Grid>
-                        <Grid xs={12} md={6} item>
+                        <Grid xs={12} md={4} item>
                             <Box p={3} className="wrap" >
-                                <ThemeProvider theme={theme}>
-                                    <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
-                                </ThemeProvider>
+                                <Card className='wrap__card wrapm'>
+                                    <CardContent>
+                                        <ThemeProvider theme={theme}>
+                                            <Typography variant='h5' >
+                                                O'quvchilar
+                                            </Typography>
+                                            <Typography variant='body2' my={3} >
+                                                Malakali o'qituvchilardan zamonaviy kasblarni o'rganish, o'z kasbining ustalaridan o'rganishingiz tarafdorimiz.
+                                            </Typography>
+                                            <Button variant='outlined' style={{ color: 'white', borderColor: 'white' }} >Batafsil</Button>
+                                        </ThemeProvider>
+                                    </CardContent>
+                                </Card>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} md={4} item>
+                            <Box p={3} className="wrap" >
+                                <Card className='wrap__card'>
+                                    <CardContent>
+                                        <ThemeProvider theme={theme}>
+                                            <Typography variant='h5' >
+                                                O'quv platformasi
+                                            </Typography>
+                                            <Typography variant='body2' my={3} >
+                                                Malakali o'qituvchilardan zamonaviy kasblarni o'rganish, o'z kasbining ustalaridan o'rganishingiz tarafdorimiz.
+                                            </Typography>
+                                            <Button variant='outlined' style={{ color: 'var(--green)', borderColor: 'var(--green)' }} >Batafsil</Button>
+                                        </ThemeProvider>
+                                    </CardContent>
+                                </Card>
                             </Box>
                         </Grid>
                     </Grid>
+
+                </Container>
+            </Box>
+
+            <Course list={8} />
+            <Box pb={6} >
+                <Container maxWidth="xl">
+                    <TitleContent title="Ko'p beriladigan savollar" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
+                    <Accordion defaultExpanded>
+                    <ThemeProvider theme={theme}>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1-content"
+                            id="panel1-header"
+                        >
+                            <Typography variant='h6' > Bu qanday platforma?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </Typography>
+                        </AccordionDetails>
+                        </ThemeProvider>
+                    </Accordion>
+                    <Accordion>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel2-content"
+                            id="panel2-header"
+                        >
+                            <Typography>Header</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </Typography>
+                        </AccordionDetails>
+                    </Accordion>
                 </Container>
             </Box>
 
