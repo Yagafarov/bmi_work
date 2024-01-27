@@ -1,14 +1,15 @@
-import { Box, Container, Divider, Grid, IconButton, InputBase, Paper, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
+import { Box, Button, Container,Grid,ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 import './pagesStyle.css'
 import Course from './Course'
 
 
-import { BoltRounded, Search } from '@mui/icons-material'
+
 
 
 import Lottie from 'lottie-react'
 import animat from '../assets/Animation - 1705563305039.json'
+import TitleContent from '../components/TitleContent/TitleContent'
 
 
 const Home = () => {
@@ -32,23 +33,8 @@ const Home = () => {
                                         Siz veb-saytlar yaratish, mobil ilovalar ishlab chiqarish yoki dasturlash sohasida yetarli bilim va ko'nikmalarga ega bo'lishni istaysizmi? Bizning kurslarimiz dasturlash sohasidagi kasblarni o'rganish uchun juda foydali bo'ladi.
                                     </Typography>
                                 </ThemeProvider>
-                                <Grid maxWidth={{ md: '400px' }} mb={3}>
-                                    <Paper
-                                        component="form"
-                                        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', marginTop: '1rem' }}
-                                    >
-                                        <InputBase
-                                            size='small'
-                                            sx={{ ml: 1, flex: 1 }}
-                                            placeholder="Kurslarni qidirish"
-                                            inputProps={{ 'aria-label': 'search google maps' }}
-                                        />
-
-                                        <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-                                        <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                                            <Search />
-                                        </IconButton>
-                                    </Paper>
+                                <Grid maxWidth={{ md: '400px' }} my={3}>
+                                    <Button variant='contained' style={{backgroundColor:'var(--green)'}} >Boshlash</Button>
                                 </Grid>
                             </Box>
                         </Grid>
@@ -97,7 +83,13 @@ const Home = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Course list={8} />
+            {/* <Course list={8} /> */}
+            <Box>
+                <Container maxWidth="xl">
+                <TitleContent  title="Biz bilan o'rganing" content="O’quv tizimidagi eng mashxur va sungi kurslar to’plamini aynan shu yerda ko’rishingiz mumkin." />
+                </Container>
+            </Box>
+
             <Box>
                 <Container maxWidth="xl">
                     <Grid container textAlign={'center'} py={1} spacing={3}>
