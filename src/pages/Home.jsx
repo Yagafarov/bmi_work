@@ -3,7 +3,7 @@ import React from 'react'
 import './pagesStyle.css'
 import Course from './Course'
 
-
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 
 
@@ -33,8 +33,9 @@ const Home = () => {
                                         Siz veb-saytlar yaratish, mobil ilovalar ishlab chiqarish yoki dasturlash sohasida yetarli bilim va ko'nikmalarga ega bo'lishni istaysizmi? Bizning kurslarimiz dasturlash sohasidagi kasblarni o'rganish uchun juda foydali bo'ladi.
                                     </Typography>
                                 </ThemeProvider>
-                                <Grid maxWidth={{ md: '400px' }} my={3}>
+                                <Grid  my={3}>
                                     <Button variant='contained' style={{backgroundColor:'var(--green)'}} >Boshlash</Button>
+                                    <Button style={{color:'var(--green)',marginLeft:'2rem'}} > <PlayCircleIcon/> biz haqimizda </Button>
                                 </Grid>
                             </Box>
                         </Grid>
