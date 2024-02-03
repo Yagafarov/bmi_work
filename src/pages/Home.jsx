@@ -5,14 +5,13 @@ import Course from './Course'
 
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 
 
 import Lottie from 'lottie-react'
 import animat from '../assets/Animation - 1705563305039.json'
 import TitleContent from '../components/TitleContent/TitleContent'
-
+import Carousel from '../components/Carousel/Carousel'
 
 const Home = () => {
     let theme = createTheme();
@@ -154,6 +153,12 @@ const Home = () => {
             <Course list={8} />
             <Box pb={6} >
                 <Container maxWidth="xl">
+                <TitleContent title="O'quvchilarimiz fikrlari" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
+                <Carousel/>
+                </Container>
+            </Box>
+            <Box pb={6} >
+                <Container maxWidth="xl">
                     <TitleContent title="Ko'p beriladigan savollar" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
                     <Accordion defaultExpanded>
                     <ThemeProvider theme={theme}>
@@ -166,8 +171,7 @@ const Home = () => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                Bu platforma orqali it sohasida kasblarni o'rganishingiz mumkin.
                             </Typography>
                         </AccordionDetails>
                         </ThemeProvider>
@@ -178,12 +182,11 @@ const Home = () => {
                             aria-controls="panel2-content"
                             id="panel2-header"
                         >
-                            <Typography>Header</Typography>
+                            <Typography>Qancha kurs mavjud?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                               Bu platformada hozirgi kunda 50 dan ziyod kurslar mavjud. Bu kurslar IT sohasidagi UI/UX, Dezayn, FrontEnd kabi bir necha sohalardan bilimga ega bo'lishingiz mumkin bo'ladi.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
