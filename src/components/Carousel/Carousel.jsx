@@ -1,19 +1,39 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import './Carousel.css';
-
-// import required modules
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
-import { Grid } from '@mui/material';
+import { Grid, ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material';
 
-export default function App() {
+const teacherData = [
+  {
+    id: 0,
+    title: "Backend",
+    subtitle: "Ali Valiy",
+    imageUrl: "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149659.png",
+    content: "Men ko'p yillik sun'iy intellekt ustida izlanishlarimni siz bilan baham ko'rish uchun Ai nomli to'liq kursni tayyorladim."
+  },
+  {
+    id: 1,
+    title: "Frontend",
+    subtitle: "Alisher dev",
+    imageUrl: "https://freepngimg.com/thumb/sleep/40603-9-guy-picture-free-hd-image.png",
+    content: "Ko'p yillik frontend sohasidagi bilimlarga ega bo'lgan. Eng sungi HTML, CSS, Javascript, React, Redux kabi ko'plab texnologiyalarini mukammal darajada bilimga ega bo'lgan dasturchiman"
+  },
+  {
+    id: 2,
+    title: "Python AI",
+    subtitle: "Marufxon",
+    imageUrl: "https://i.pinimg.com/originals/1b/f6/21/1bf621bd28b096daa7aa7c7fbe33c0e8.png",
+    content: "Python dasturlash tilining eng sungi yangiliklari va sizga hech kim baham ko'rmaydigan o'rganish usullari va texnologiyalarini o'rgatishga muljallangan Python Ai kursiga xush kelibsiz"
+  },
+];
+
+const App = () => {
+  let theme = createTheme();
+  theme = responsiveFontSizes(theme);
   return (
     <>
       <Swiper
@@ -35,70 +55,40 @@ export default function App() {
           className="parallax-bg"
           data-swiper-parallax="-23%"
         ></div>
-        <SwiperSlide>
-          
-          <Grid container >
-            <Grid item xs={12} md={6} ><div>
-              <div className="title" data-swiper-parallax="-300">
-                Slide 1
-              </div>
-              <div className="subtitle" data-swiper-parallax="-200">
-                Subtitle
-              </div>
-              <div className="text" data-swiper-parallax="-100">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                  dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                  laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                  Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                  Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                  ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                  tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-                </p>
-              </div>
-            </div></Grid>
-            <Grid item xs={12} md={6} ><img src="https://img.freepik.com/free-photo/young-handsome-man-holding-notebooks-concept-e-learning-courses_1258-26588.jpg" style={{ borderRadius: "20px" }} /></Grid>
-          </Grid>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 2
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 3
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-          </div>
-        </SwiperSlide>
+
+        {teacherData.map((item) => (
+          <SwiperSlide key={item.id}>
+            <Grid container px={3}>
+              <Grid item xs={12} md={8} style={{ display: 'flex', alignItems: 'center' }} order={{ xs: 1, md: 0 }} > 
+                <div>
+                  <div className="title" data-swiper-parallax="-300">
+                  <ThemeProvider theme={theme}>
+                    {item.title}
+                  </ThemeProvider>
+                  </div>
+                  <div className="subtitle" data-swiper-parallax="-200">
+                  <ThemeProvider theme={theme}>
+                    {item.subtitle}
+                  </ThemeProvider>
+                  </div>
+                  <div className="text" data-swiper-parallax="-100">
+                    <p>
+                    <ThemeProvider theme={theme}>
+                      {item.content}
+                  </ThemeProvider>
+                    </p>
+                  </div>
+                </div>
+              </Grid>
+              <Grid item xs={12} md={4} style={{ display: 'flex', justifyContent: 'center' }} order={{ xs: 0, md: 1 }}>
+                <img src={item.imageUrl} style={{ borderRadius: "20px", height: 'auto', maxWidth: '100%', maxHeight: '15rem' }} />
+              </Grid>
+            </Grid>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
-}
+};
+
+export default App;

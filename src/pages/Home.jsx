@@ -153,7 +153,7 @@ const Home = () => {
             <Course list={8} />
             <Box pb={6} >
                 <Container maxWidth="xl">
-                <TitleContent title="O'quvchilarimiz fikrlari" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
+                <TitleContent title="O'qituvchilarimiz fikrlari" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
                 <Carousel/>
                 </Container>
             </Box>
