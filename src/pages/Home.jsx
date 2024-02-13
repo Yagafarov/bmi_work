@@ -68,7 +68,7 @@ const Home = () => {
                                Biz bilan IT sohasini o'rganish yanada oson
                             </Typography>
                             <Typography py={3}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores placeat exercitationem quidem odit culpa cupiditate esse eum necessitatibus, ut quaerat magnam, nulla nemo asperiores quam sequi. Sequi, maiores quod?
+                                IT sohasida yangi bilimlarni egallash uchun avvalo sizda kerakli kunikmalar shakllangan bo'lishi lozim. Minimal kompyuter savodxonligi ham bo'lsa ziyon qilmaydi. Shunda siz IT dagi o'zingiz tanlagan sohangizni o'rganishingiz oson bo'ladi.
                             </Typography> 
                             <Button variant='contained' style={{ backgroundColor: 'var(--green)' }} >Batafsil</Button>  
                             </ThemeProvider>
@@ -89,10 +89,10 @@ const Home = () => {
                             <Box>
                             <ThemeProvider theme={theme}>
                             <Typography variant='h4'>
-                                Lorem, ipsum dolor.
+                                IT ni o'rganish uchun kerakli muhit
                             </Typography>
                             <Typography py={3}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores placeat exercitationem quidem odit culpa cupiditate esse eum necessitatibus, ut quaerat magnam, nulla nemo asperiores quam sequi. Sequi, maiores quod?
+                                IT sohasini o'rganishingiz uchun malakasi o'qituvchilar sizga qulay bo'lgan yerda siz hohlagan vaqtda siz bilim olishingiz uchun ko'maklashadi. Buning uchun siz tizimdan o'zingiz hohlagan kursga a'zo bo'ling va o'rganishni boshlang. Muhimi ishtiyoq bo'lsa bas!
                             </Typography> 
                             <Button variant='contained' style={{ backgroundColor: 'var(--green)' }} >Batafsil</Button>  
                             </ThemeProvider>
@@ -106,7 +106,7 @@ const Home = () => {
                 </Box>
             </Container>
             </Box>
-            <Box minHeight={{ xs: '100%', md: '100vh' }} alignItems={'center'} display={'flex'} className="b2" >
+            <Box minHeight={{ xs: '100%', md: '70vh' }} alignItems={'center'} display={'flex'} className="b2" >
                 <Container maxWidth="xl">
                     <TitleContent title="Biz bilan o'rganing" content="Bizing o'quv platforma orqali quyidagilarga ega bo'lishingiz mumkin." />
 
