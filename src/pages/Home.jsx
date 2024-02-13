@@ -1,7 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, Container, Grid, ThemeProvider, Typography, createTheme, responsiveFontSizes } from '@mui/material'
 import React from 'react'
 import './pagesStyle.css'
-import Course from './Course'
 
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -10,6 +9,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Lottie from 'lottie-react'
 import animat from '../assets/Animation - 1705563305039.json'
+import animat1 from '../assets/little.json'
+import animat2 from '../assets/li1.json'
+import animat3 from '../assets/li2.json'
 import TitleContent from '../components/TitleContent/TitleContent'
 import Carousel from '../components/Carousel/Carousel'
 
@@ -24,7 +26,7 @@ const Home = () => {
 
     return (
         <>
-            <Box minHeight={{ xs: '100%', md: '100vh' }} pt={{ xs: 8, sm: 2, md: 2, lg: 2, xl: 2 }} mt={1} alignItems={'center'} display={'flex'}>
+            <Box minHeight={{ xs: '100%', md: '100vh' }} pt={{ xs: 8, sm: 2, md: 2, lg: 2, xl: 2 }} mt={1} alignItems={'center'} display={'flex'} className="b1" >
                 <Container maxWidth="xl">
                     <Grid container sx={{ flexGrow: 1 }}>
                         <Grid item xs={12} md={6} order={{ xs: 1, md: 0 }} display={'flex'} alignItems={'center'}  >
@@ -51,45 +53,60 @@ const Home = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Box>
-                <Container maxWidth="xl">
-                    <Grid container textAlign={'center'} py={1}>
-                        <Grid xs={12} md={3} item>
-                            <Box p={3} >
-                                <ThemeProvider theme={theme}>
-                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >50+</Typography>
-                                    <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
-                                </ThemeProvider>
-                            </Box>
+
+            <Box py={6} minHeight={{ xs: '100%', md: '70vh' }} alignItems={'center'} display={'flex'} >
+            <Container maxWidth="xl">
+                <Box>
+                    <Grid container  spacing={3} >
+                        <Grid item xs={12} md={6}>
+                            <Lottie animationData={animat2} className='home__img' width={'10%'} />
                         </Grid>
-                        <Grid xs={12} md={3} item>
-                            <Box p={3} >
-                                <ThemeProvider theme={theme}>
-                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >10+</Typography>
-                                    <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
-                                </ThemeProvider>
-                            </Box>
-                        </Grid>
-                        <Grid xs={12} md={3} item>
-                            <Box p={3} >
-                                <ThemeProvider theme={theme}>
-                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >120+</Typography>
-                                    <Typography variant='overline'>Platformamizda mavjud kitoblar soni</Typography>
-                                </ThemeProvider>
-                            </Box>
-                        </Grid>
-                        <Grid xs={12} md={3} item>
-                            <Box p={3} >
-                                <ThemeProvider theme={theme}>
-                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >500+</Typography>
-                                    <Typography variant='overline'>Jami tahsil olayotgan o’quvchilarimiz</Typography>
-                                </ThemeProvider>
+                        <Grid item xs={12} md={6} display={'flex'} alignItems={'center'}>
+                            <Box>
+                            <ThemeProvider theme={theme}>
+                            <Typography variant='h4'>
+                               Biz bilan IT sohasini o'rganish yanada oson
+                            </Typography>
+                            <Typography py={3}>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores placeat exercitationem quidem odit culpa cupiditate esse eum necessitatibus, ut quaerat magnam, nulla nemo asperiores quam sequi. Sequi, maiores quod?
+                            </Typography> 
+                            <Button variant='contained' style={{ backgroundColor: 'var(--green)' }} >Batafsil</Button>  
+                            </ThemeProvider>
                             </Box>
                         </Grid>
                     </Grid>
-                </Container>
+
+                </Box>
+            </Container>
             </Box>
-            <Box>
+
+            <Box py={6} minHeight={{ xs: '100%', md: '70vh' }} alignItems={'center'} display={'flex'} >
+            <Container maxWidth="xl">
+                <Box>
+                    <Grid container  spacing={3} >
+                        
+                        <Grid item xs={12} md={6} display={'flex'} alignItems={'center'}>
+                            <Box>
+                            <ThemeProvider theme={theme}>
+                            <Typography variant='h4'>
+                                Lorem, ipsum dolor.
+                            </Typography>
+                            <Typography py={3}>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores placeat exercitationem quidem odit culpa cupiditate esse eum necessitatibus, ut quaerat magnam, nulla nemo asperiores quam sequi. Sequi, maiores quod?
+                            </Typography> 
+                            <Button variant='contained' style={{ backgroundColor: 'var(--green)' }} >Batafsil</Button>  
+                            </ThemeProvider>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Lottie animationData={animat1} className='home__img' width={'10%'} />
+                        </Grid>
+                    </Grid>
+
+                </Box>
+            </Container>
+            </Box>
+            <Box minHeight={{ xs: '100%', md: '100vh' }} alignItems={'center'} display={'flex'} className="b2" >
                 <Container maxWidth="xl">
                     <TitleContent title="Biz bilan o'rganing" content="Bizing o'quv platforma orqali quyidagilarga ega bo'lishingiz mumkin." />
 
@@ -146,18 +163,55 @@ const Home = () => {
                             </Box>
                         </Grid>
                     </Grid>
-
                 </Container>
             </Box>
-
-            <Course list={8} />
-            <Box pb={6} >
+            
+            
+            <Box pb={6} alignItems={'center'} display={'flex'} className="b0" py={6}   >
                 <Container maxWidth="xl">
                 <TitleContent title="O'qituvchilarimiz fikrlari" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
                 <Carousel/>
                 </Container>
             </Box>
-            <Box pb={6} >
+            <Box>
+                <Container maxWidth="xl">
+                    <Grid container textAlign={'center'} py={1}>
+                        <Grid xs={12} md={3} item>
+                            <Box p={3} >
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >50+</Typography>
+                                    <Typography variant='overline'>Platformamizda mavjud kurslar soni</Typography>
+                                </ThemeProvider>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} md={3} item>
+                            <Box p={3} >
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >10+</Typography>
+                                    <Typography variant='overline'>Uzoq yillik tajribaga ega ustozlarimiz</Typography>
+                                </ThemeProvider>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} md={3} item>
+                            <Box p={3} >
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >120+</Typography>
+                                    <Typography variant='overline'>Platformamizda mavjud kitoblar soni</Typography>
+                                </ThemeProvider>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} md={3} item>
+                            <Box p={3} >
+                                <ThemeProvider theme={theme}>
+                                    <Typography variant='h4' style={{ color: 'var(--green)' }} fontWeight={'bold'} >500+</Typography>
+                                    <Typography variant='overline'>Jami tahsil olayotgan o’quvchilarimiz</Typography>
+                                </ThemeProvider>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
+            <Box minHeight={{ xs: '100%', md: '100vh' }} alignItems={'center'} display={'flex'} className="b3" >
                 <Container maxWidth="xl">
                     <TitleContent title="Ko'p beriladigan savollar" content="O'zingizni qiziqtirgan umumiy savollarga quyidagi bo'limdan ma'lumotlar olishingiz mumkin." />
                     <Accordion defaultExpanded>
@@ -183,6 +237,35 @@ const Home = () => {
                             id="panel2-header"
                         >
                             <Typography>Qancha kurs mavjud?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography>
+                               Bu platformada hozirgi kunda 50 dan ziyod kurslar mavjud. Bu kurslar IT sohasidagi UI/UX, Dezayn, FrontEnd kabi bir necha sohalardan bilimga ega bo'lishingiz mumkin bo'ladi.
+                            </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel2-content"
+                            id="panel2-header"
+                        >
+                            <Typography>Qaysi sohalarni o'rganishim mumkin?</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography>
+                               Bu platformada hozirgi kunda 50 dan ziyod kurslar mavjud. Bu kurslar IT sohasidagi UI/UX, Dezayn, FrontEnd kabi bir necha sohalardan bilimga ega bo'lishingiz mumkin bo'ladi.
+                            </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                    
+                    <Accordion>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel2-content"
+                            id="panel2-header"
+                        >
+                            <Typography>Qancha vaqt ketadi?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>

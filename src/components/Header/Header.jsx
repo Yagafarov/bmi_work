@@ -14,9 +14,10 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/navbar/Logo.svg'
 
 const pages = [
+    {title:'Bosh sahifa',link:'/'},
     { title: 'Kurslar', link: '/course' },
     { title: 'Blog', link: '/blog' },
-    { title: 'Kitoblar', link: '/book' },
+    // { title: 'Kitoblar', link: '/book' },
     { title: 'Biz haqimizda', link: '/about' },
 ];
 
@@ -34,7 +35,7 @@ function Header() {
 
 
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: '#fff', color: '#000', top: '0', left: '0' }} component="nav" >
+        <AppBar position="fixed" sx={{ backgroundColor: '#fff', color: '#000', top: '0', left: '0' }} component="nav" id="nav" >
             <Container maxWidth="xl" >
                 <Toolbar disableGutters >
 

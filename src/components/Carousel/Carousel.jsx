@@ -38,8 +38,8 @@ const App = () => {
     <>
       <Swiper
         style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
+          '--swiper-navigation-color': 'var(--green)',
+          '--swiper-pagination-color': '#333',
         }}
         speed={600}
         parallax={true}
@@ -81,7 +81,7 @@ const App = () => {
                 </div>
               </Grid>
               <Grid item xs={12} md={4} style={{ display: 'flex', justifyContent: 'center' }} order={{ xs: 0, md: 1 }}>
-                <img src={item.imageUrl} style={{ borderRadius: "20px", height: 'auto', maxWidth: '100%', maxHeight: '15rem' }} />
+                <img src={item.imageUrl} style={{ borderRadius: "20px", height: 'auto', maxWidth: '100%', maxHeight: '25rem' }} data-swiper-parallax="-250" />
               </Grid>
             </Grid>
           </SwiperSlide>
