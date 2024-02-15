@@ -21,7 +21,7 @@ const Course = () => {
   };
 
   return (
-    <Box style={{ minHeight: '90vh' }} overflow="hidden" pt={{ xs: 7, sm: 3, md: 4, lg: 5, xl: 6 }}>
+    <Box style={{ minHeight: '90vh' }} overflow="hidden" pt={{ xs: 7, sm: 3, md: 4, lg: 5, xl: 6 }} className="b1" >
       <Container maxWidth="xl" style={{ textAlign: 'justify' }}>
         <TitleContent title="Tanlangan Kurslar" content="O’quv tizimidagi eng mashxur va sungi kurslar to’plamini aynan shu yerda ko’rishingiz mumkin." />
         <CardGroup data={randomCards} />

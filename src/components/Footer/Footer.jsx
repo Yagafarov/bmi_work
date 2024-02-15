@@ -7,12 +7,8 @@ const Footer = () => {
         <Box
             component={"footer"}
             sx={{
-                backgroundColor: (theme) =>
-                    theme.palette.mode === "light"
-                        ? theme.palette.grey[200]
-                        : theme.palette.grey[800],
                 p: 6,
-            }}
+            }} className='b2'
         >
             <div>
                 <Grid container spacing={5}>
